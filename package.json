@@ -1,7 +1,7 @@
 {
   "name": "sokoban",
   "version": "0.0.0",
-  "description": "Small description for sokoban goes here",
+  "description": "Sokoban game implemented in Ember",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -12,11 +12,11 @@
     "start": "ember server",
     "test": "ember test"
   },
-  "repository": "",
+  "repository": "https://github.com/san650/ember-sokoban.git",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Santiago Ferreira",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",
