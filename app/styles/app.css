@@ -1,0 +1,21 @@
+.board--row {
+  clear: both;
+}
+
+.cell {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.cell__blank {
+}
+
+.cell__ground {
+  background-color: brown;
+}
+
+.player {
+  border: 1px solid black;
+  background-color: green;
+  border-radius: 60px;
+}
