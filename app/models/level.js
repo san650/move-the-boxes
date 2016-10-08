@@ -55,6 +55,7 @@ export default Ember.Object.extend({
   left() {
     let row = this.get('player.row');
     let column = this.get('player.column') - 1;
+    this.set('player.direction', 'left');
 
     this.move(row, column, [0,-1]);
   },
@@ -62,6 +63,7 @@ export default Ember.Object.extend({
   right() {
     let row = this.get('player.row');
     let column = this.get('player.column') + 1;
+    this.set('player.direction', 'right');
 
     this.move(row, column, [0,1]);
   },

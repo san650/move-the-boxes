@@ -7,6 +7,7 @@ const { computed, on } = Ember;
 
 const Component = Ember.Component.extend(EKMixin, {
   classNames: ['cell', 'player'],
+  classNameBindings: ['player.direction'],
   attributeBindings: ['style'],
   style: computed('player.{row,column}', function() {
     let left = SIZE * this.get('player.column');

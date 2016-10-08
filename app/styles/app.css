@@ -1,27 +1,56 @@
-.board--row {
-  clear: both;
-}
-
 .cell {
   position: absolute;
   box-sizing: border-box;
+  transition: left .2s, top .2s;
+  background: transparent none 50% 50% no-repeat;
+  background-size: cover;
 }
 
 .cell__wall {
-  background-color: rgba(0,0,0,0.5);
+  background-image: url('../wall.png');
 }
 
 .cell__ground {
   background-color: rgba(0,255,0,0.5);
 }
 
+.board {
+  position: relative;
+  margin: auto;
+}
+
 .player {
-  border: 1px solid black;
-  background-color: green;
-  border-radius: 60px;
+  background-image: url('../player.png');
+}
+
+.player.left {
+  transform: scaleX(-1);
 }
 
 .box {
-  border: 1px solid black;
-  background-color: purple;
+  background-image: url('../box.png');
+}
+
+.game-over {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.container {
+  width: auto;
+  margin-top: 40px;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
 }

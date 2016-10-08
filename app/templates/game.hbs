@@ -5,10 +5,13 @@
 }
 </style>
 
-{{#if level.won}}
-  <h1>YOU WON!</h1>
-{{/if}}
+<div class="container">
+  {{#draw-board level.board}}
+    {{draw-player level.player onMove=(route-action 'move' level)}}
+    {{draw-box level.box}}
+  {{/draw-board}}
 
-{{draw-board level.board}}
-{{draw-player level.player onMove=(route-action 'move' level)}}
-{{draw-box level.box}}
+  {{#if level.won}}
+    <h1 class="game-over">YOU WON!</h1>
+  {{/if}}
+</div>
