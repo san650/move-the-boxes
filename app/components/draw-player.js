@@ -1,9 +1,11 @@
 import Ember from 'ember';
 import { SIZE } from 'sokoban/size';
+import { EKMixin } from 'ember-keyboard';
+import { getCode, keyDown } from 'ember-keyboard';
 
-const { computed } = Ember;
+const { computed, on } = Ember;
 
-const Component = Ember.Component.extend({
+const Component = Ember.Component.extend(EKMixin, {
   classNames: ['cell', 'player'],
   attributeBindings: ['style'],
   style: computed('player.{row,column}', function() {
@@ -11,6 +13,31 @@ const Component = Ember.Component.extend({
     let top = SIZE * this.get('player.row');
 
     return `left:${left}px;top:${top}px`;
+  }),
+
+  activateKeyboard: Ember.on('init', function() {
+    this.set('keyboardActivated', true);
+  }),
+
+  move: on(keyDown('ArrowUp'), keyDown('ArrowDown'), keyDown('ArrowLeft'), keyDown('ArrowRight'), function(event) {
+    let direction;
+
+    switch(getCode(event)) {
+      case 'ArrowUp':
+        direction = 'up';
+        break;
+      case 'ArrowDown':
+        direction = 'down';
+        break;
+      case 'ArrowLeft':
+        direction = 'left';
+        break;
+      case 'ArrowRight':
+        direction = 'right';
+        break;
+    }
+
+    this.attrs.onMove(direction);
   })
 });
 

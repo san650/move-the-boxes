@@ -16,10 +16,10 @@ const Component = Ember.Component.extend({
   }),
 
   cellType: computed('cell', function() {
-    if (this.get('cell.isBlank')) {
-      return 'cell__blank';
-    } else {
+    if (this.get('cell.isGround')) {
       return 'cell__ground';
+    } else {
+      return 'cell__wall';
     }
   })
 });

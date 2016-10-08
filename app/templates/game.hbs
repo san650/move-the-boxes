@@ -6,4 +6,4 @@
 </style>
 
 {{draw-board level.board}}
-{{draw-player level.player}}
+{{draw-player level.player onMove=(route-action 'move' level)}}

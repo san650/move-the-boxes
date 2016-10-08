@@ -3,12 +3,12 @@ import Ember from 'ember';
 const { computed } = Ember;
 
 const Cell = Ember.Object.extend({
-  type: 'blank',
+  type: 'ground',
   row: null,
   column: null,
 
-  isBlank: computed.equal('type', 'blank'),
-  isGround: computed.equal('type', 'ground')
+  isGround: computed.equal('type', 'ground'),
+  isWall: computed.equal('type', 'wall')
 });
 
 export default Ember.Object.extend({
@@ -45,11 +45,11 @@ export default Ember.Object.extend({
 
   rows: computed.readOnly('cells'),
 
-  setGround(positions) {
+  setWall(positions) {
     let cells = this.get('cells');
 
     positions.forEach(([row, column]) => {
-      cells[row][column].set('type', 'ground');
+      cells[row][column].set('type', 'wall');
     });
   }
 });

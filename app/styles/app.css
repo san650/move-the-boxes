@@ -7,11 +7,12 @@
   box-sizing: border-box;
 }
 
-.cell__blank {
+.cell__wall {
+  background-color: rgba(0,0,0,0.5);
 }
 
 .cell__ground {
-  background-color: brown;
+  background-color: rgba(0,255,0,0.5);
 }
 
 .player {

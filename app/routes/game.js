@@ -8,7 +8,14 @@ export default Ember.Route.extend({
   },
 
   setupController(controller, model) {
+    controller.set('game', model);
     controller.set('level', model.level);
     controller.set('size', SIZE);
+  },
+
+  actions: {
+    move(level, direction) {
+      level[direction]();
+    }
   }
 });
