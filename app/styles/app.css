@@ -20,3 +20,8 @@
   background-color: green;
   border-radius: 60px;
 }
+
+.box {
+  border: 1px solid black;
+  background-color: purple;
+}
