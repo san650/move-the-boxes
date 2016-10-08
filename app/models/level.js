@@ -7,14 +7,15 @@ const { computed, debug } = Ember;
 
 export default Ember.Object.extend({
   board: computed(function() {
-    let board = Board.create({ rowCount: 5, columnCount: 5 });
+    let board = Board.create({ rowCount: 6, columnCount: 6 });
 
     board.setWall([
-      [0,0], [0,1], [0,2], [0,3], [0,4],
-      [1,0],                      [1,4],
-                    [2,2],        [2,4],
-      [3,0],                      [3,4],
-      [4,0], [4,1], [4,2], [4,3], [4,4]
+      [0,0], [0,1], [0,2], [0,3], [0,4], [0,5],
+      [1,0],                             [1,5],
+      [2,0],                             [2,5],
+                           [3,3],        [3,5],
+      [4,0],                             [4,5],
+      [5,0], [5,1], [5,2], [5,3], [5,4], [5,5]
     ]);
 
     return board;
@@ -22,17 +23,20 @@ export default Ember.Object.extend({
 
   player: computed(function() {
     return Player.create({
-      row: 2,
+      row: 3,
       column: 0
     });
   }),
 
   box: computed(function() {
     return Box.create({
-      row: 1,
-      column: 2
+      row: 2,
+      column: 3
     });
   }),
+
+  targetRow: 3,
+  targetColumn: 0,
 
   up() {
     let row = this.get('player.row') - 1;
@@ -81,6 +85,10 @@ export default Ember.Object.extend({
   },
 
   move(row, column, [offsetRow, offsetColumn]) {
+    if (this.get('won')) {
+      return;
+    }
+
     if (this.isValidCell(row, column)) {
       if (!this.isBox(row, column) || this.moveBox(row + offsetRow, column + offsetColumn)) {
         this.set('player.row', row);
@@ -97,5 +105,10 @@ export default Ember.Object.extend({
       this.set('box.column', column);
       return true;
     }
-  }
+  },
+
+  won: computed('box.{row,column}', function() {
+    return this.get('box.row') === this.get('targetRow') &&
+      this.get('box.column') === this.get('targetColumn');
+  })
 });
