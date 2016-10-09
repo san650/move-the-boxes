@@ -3,7 +3,7 @@
   box-sizing: border-box;
   transition: left .2s, top .2s;
   background: transparent none 50% 50% no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .cell__wall {
