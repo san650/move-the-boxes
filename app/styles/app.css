@@ -6,6 +6,25 @@
   --layer-osd: 4;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+}
+
+a,
+a:link,
+a:hover,
+a:active,
+a:visited {
+  color: inherit;
+}
+
 .kind--cell {
   position: absolute;
   box-sizing: border-box;
@@ -51,10 +70,13 @@
 .board {
   position: relative;
   margin: auto;
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 5px;
 }
 
 .level-over {
   z-index: var(--layer-osd);
+  box-sizing: border-box;
   position: absolute;
   top: 0;
   left: 0;
