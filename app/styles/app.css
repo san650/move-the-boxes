@@ -24,11 +24,12 @@
   background-image: url('../target.png');
   opacity: .3;
   background-size: 60%;
+
+  animation: 1s ease-in-out 0s infinite alternate swing;
 }
 
 .kind--wall {
-  background-image: url('../wall.png');
-  background-color: black;
+  background-color: rgba(0,0,0,0.5);
   z-index: var(--layer-wall);
 }
 
@@ -73,4 +74,13 @@
   content: "";
   display: block;
   clear: both;
+}
+
+@keyframes swing {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(30deg);
+  }
 }
