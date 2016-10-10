@@ -1,10 +1,12 @@
 import Ember from 'ember';
 import Tutorial from 'sokoban/models/levels/0-tutorial';
 import Escape from 'sokoban/models/levels/1-escape';
+import Dune from 'sokoban/models/levels/2-dune';
 
 const Levels = {
   tutorial: Tutorial,
-  escape: Escape
+  escape: Escape,
+  dune: Dune
 };
 
 export default Ember.Route.extend({
@@ -13,7 +15,13 @@ export default Ember.Route.extend({
   },
 
   setupController(controller, model) {
-    let slug = model.constructor === Tutorial ? 'escape' : null;
+    let slug;
+
+    if (model.constructor === Tutorial) {
+      slug = 'escape';
+    } else if (model.constructor === Escape) {
+      slug = 'dune';
+    }
 
     controller.set('level', model);
     controller.set('nextLevel', slug);

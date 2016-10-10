@@ -34,7 +34,7 @@ export default Ember.Object.extend({
   },
 
   isInsideLimits(row, column) {
-    return (row >= 0 || column >= 0) &&
+    return (row >= 0 && column >= 0) &&
       (row < this.get('rowCount') && column < this.get('columnCount'));
   },
 
