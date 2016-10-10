@@ -4,6 +4,7 @@ import Ground from 'sokoban/models/ground';
 import Wall from 'sokoban/models/wall';
 import Box from 'sokoban/models/box';
 import Group from 'sokoban/models/group';
+import Target from 'sokoban/models/target';
 
 const { computed } = Ember;
 
@@ -142,5 +143,20 @@ export default Ember.Object.extend({
 
   createBox(row, column) {
     return Box.create({ row, column });
+  },
+
+  createTarget(row, column) {
+    return Target.create({ row, column });
+  },
+
+  targetsFulfilled() {
+    let boxes = this.get('cells.data').filterBy('constructor', Box);
+    let targets = this.get('cells.data').filterBy('constructor', Target);
+
+    return targets.every(
+      (target) => boxes
+        .filterBy('row', target.get('row'))
+        .isAny('column', target.get('column'))
+    );
   }
 });

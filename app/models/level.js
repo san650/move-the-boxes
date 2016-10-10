@@ -26,6 +26,10 @@ export default Ember.Object.extend({
     board.pushCell(box);
     this.set('box', box);
 
+    let target = board.createTarget(3, 1);
+    board.pushCell(target);
+    this.set('target', target);
+
     return board;
   }),
 
@@ -35,9 +39,6 @@ export default Ember.Object.extend({
       column: 0
     });
   }),
-
-  targetRow: 3,
-  targetColumn: 0,
 
   up() {
     let row = this.get('player.row') - 1;
@@ -69,27 +70,15 @@ export default Ember.Object.extend({
     this.move(row, column, [0,1]);
   },
 
-  isEmpty(row, column) {
-    let board = this.get('board');
-
-    return board.isInsideLimits(row, column) &&
-      !board.at(row, column).get('occupiesSpace');
-  },
-
-  canBeMoved(row, column) {
-    let board = this.get('board');
-
-    return board.at(row, column).get('canBeMoved');
-  },
-
   move(row, column, [offsetRow, offsetColumn]) {
     if (this.get('won')) {
       return;
     }
 
+    let board = this.get('board');
     let player = this.get('player');
 
-    if (this.isEmpty(row, column)) {
+    if (board.isEmpty(row, column)) {
       player.moveTo(row, column);
     } else if (this.canBeMoved(row, column)) {
       if (this.tryMoveBox({ row, column } , { row: row + offsetRow, column: column + offsetColumn })) {
@@ -102,15 +91,23 @@ export default Ember.Object.extend({
     }
   },
 
+  canBeMoved(row, column) {
+    let board = this.get('board');
+
+    return board.at(row, column).get('canBeMoved');
+  },
+
   tryMoveBox(origin, target) {
-    if (this.isEmpty(target.row, target.column)) {
-      this.get('board').at(origin.row, origin.column).moveTo(target.row, target.column);
+    let board = this.get('board');
+
+    if (board.isEmpty(target.row, target.column)) {
+      board.at(origin.row, origin.column).moveTo(target.row, target.column);
+
       return true;
     }
   },
 
-  won: computed('box.{row,column}', function() {
-    return this.get('box.row') === this.get('targetRow') &&
-      this.get('box.column') === this.get('targetColumn');
+  won: computed('player.{row,column}', function() {
+    return this.get('board').targetsFulfilled();
   })
 });

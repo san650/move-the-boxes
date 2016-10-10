@@ -14,12 +14,20 @@
 }
 
 .kind--ground {
-  background-color: rgba(0,255,0,0.5);
+  background-color: white;
   z-index: var(--layer-background);
+}
+
+.kind--target {
+  background-color: transparent;
+  background-image: url('../target.png');
+  opacity: .3;
+  background-size: 60%;
 }
 
 .kind--wall {
   background-image: url('../wall.png');
+  background-color: black;
   z-index: var(--layer-wall);
 }
 
