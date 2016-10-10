@@ -3,6 +3,7 @@
   --layer-wall: 1;
   --layer-npc: 2;
   --layer-pc: 3;
+  --layer-osd: 4;
 }
 
 .kind--cell {
@@ -52,8 +53,8 @@
   margin: auto;
 }
 
-.game-over {
-  z-index: 1;
+.level-over {
+  z-index: var(--layer-osd);
   position: absolute;
   top: 0;
   left: 0;
@@ -62,7 +63,18 @@
   width: 100%;
   height: 100%;
   margin: 0;
+  padding-top: 250px;
   text-align: center;
+  font-family: monospace;
+  color: white;
+  font-size: 2rem;
+}
+
+.level-over--message {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+  display: block;
 }
 
 .container {

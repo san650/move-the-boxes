@@ -4,13 +4,4 @@
   height: {{size}}px;
 }
 </style>
-
-<div class="container">
-  {{#draw-board level.board}}
-    {{draw-player level.player onMove=(route-action 'move' level)}}
-  {{/draw-board}}
-
-  {{#if level.won}}
-    <h1 class="game-over">YOU WON!</h1>
-  {{/if}}
-</div>
+{{outlet}}

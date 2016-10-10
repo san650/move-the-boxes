@@ -1,0 +1,14 @@
+<div class="container">
+  {{#draw-board level.board}}
+    {{draw-player level.player onMove=(route-action 'move' level)}}
+  {{/draw-board}}
+
+  {{#if level.won}}
+    <p class="level-over">
+      <span class="level-over--message">LEVEL COMPLETED</span>
+      {{#if nextLevel}}
+        {{#link-to 'level' nextLevel}}next level{{/link-to}}
+      {{/if}}
+    </p>
+  {{/if}}
+</div>
