@@ -7,16 +7,24 @@ const { computed, debug } = Ember;
 
 export default Ember.Object.extend({
   board: computed(function() {
-    let board = Board.create({ rowCount: 6, columnCount: 6 });
-
-    board.setWall([
+    let wall = [
       [0,0], [0,1], [0,2], [0,3], [0,4], [0,5],
       [1,0],               [1,3],        [1,5],
       [2,0],                             [2,5],
                            [3,3],        [3,5],
       [4,0],                             [4,5],
       [5,0], [5,1], [5,2], [5,3], [5,4], [5,5]
-    ]);
+    ];
+
+    let board = Board.create({ rowCount: 6, columnCount: 6 });
+
+    wall.forEach(([row, column]) => {
+      board.pushCell(board.createWall(row, column));
+    });
+
+    let box = board.createBox(2, 3);
+    board.pushCell(box);
+    this.set('box', box);
 
     return board;
   }),
@@ -25,13 +33,6 @@ export default Ember.Object.extend({
     return Player.create({
       row: 3,
       column: 0
-    });
-  }),
-
-  box: computed(function() {
-    return Box.create({
-      row: 2,
-      column: 3
     });
   }),
 
@@ -68,22 +69,17 @@ export default Ember.Object.extend({
     this.move(row, column, [0,1]);
   },
 
-  isValidCell(row, column) {
-    if (row < 0 || column < 0) {
-      return;
-    }
+  isEmpty(row, column) {
+    let board = this.get('board');
 
-    if (row === this.get('board.rowCount') || column === this.get('board.columnCount')) {
-      return;
-    }
-
-    return this.get('board.cells')[row][column].get('isGround');
+    return board.isInsideLimits(row, column) &&
+      !board.at(row, column).get('occupiesSpace');
   },
 
-  isBox(row, column) {
-    let box = this.get('box');
+  canBeMoved(row, column) {
+    let board = this.get('board');
 
-    return row === box.get('row') && column === box.get('column');
+    return board.at(row, column).get('canBeMoved');
   },
 
   move(row, column, [offsetRow, offsetColumn]) {
@@ -91,20 +87,24 @@ export default Ember.Object.extend({
       return;
     }
 
-    if (this.isValidCell(row, column)) {
-      if (!this.isBox(row, column) || this.moveBox(row + offsetRow, column + offsetColumn)) {
-        this.set('player.row', row);
-        this.set('player.column', column);
+    let player = this.get('player');
+
+    if (this.isEmpty(row, column)) {
+      player.moveTo(row, column);
+    } else if (this.canBeMoved(row, column)) {
+      if (this.tryMoveBox({ row, column } , { row: row + offsetRow, column: column + offsetColumn })) {
+        player.moveTo(row, column);
+      } else {
+        debug('cannot be moved');
       }
     } else {
       debug('is wall');
     }
   },
 
-  moveBox(row, column) {
-    if (this.isValidCell(row, column)) {
-      this.set('box.row', row);
-      this.set('box.column', column);
+  tryMoveBox(origin, target) {
+    if (this.isEmpty(target.row, target.column)) {
+      this.get('board').at(origin.row, origin.column).moveTo(target.row, target.column);
       return true;
     }
   },

@@ -1,5 +1,5 @@
 <style>
-.cell {
+.kind--cell {
   width: {{size}}px;
   height: {{size}}px;
 }
@@ -8,7 +8,6 @@
 <div class="container">
   {{#draw-board level.board}}
     {{draw-player level.player onMove=(route-action 'move' level)}}
-    {{draw-box level.box}}
   {{/draw-board}}
 
   {{#if level.won}}

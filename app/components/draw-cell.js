@@ -16,11 +16,7 @@ const Component = Ember.Component.extend({
   }),
 
   cellType: computed('cell', function() {
-    if (this.get('cell.isGround')) {
-      return 'cell__ground';
-    } else {
-      return 'cell__wall';
-    }
+    return this.get('cell.kind').map((kind) => `kind--${kind}`).join(' ');
   })
 });
 

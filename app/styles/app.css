@@ -1,4 +1,11 @@
-.cell {
+:root {
+  --layer-background: 0;
+  --layer-wall: 1;
+  --layer-npc: 2;
+  --layer-pc: 3;
+}
+
+.kind--cell {
   position: absolute;
   box-sizing: border-box;
   transition: left .2s, top .2s;
@@ -6,29 +13,33 @@
   background-size: contain;
 }
 
-.cell__wall {
-  background-image: url('../wall.png');
+.kind--ground {
+  background-color: rgba(0,255,0,0.5);
+  z-index: var(--layer-background);
 }
 
-.cell__ground {
-  background-color: rgba(0,255,0,0.5);
+.kind--wall {
+  background-image: url('../wall.png');
+  z-index: var(--layer-wall);
+}
+
+.kind--box {
+  background-image: url('../box.png');
+  z-index: var(--layer-npc);
+}
+
+.kind--player {
+  background-image: url('../player.png');
+  z-index: var(--layer-pc);
+}
+
+.kind--player.left {
+  transform: scaleX(-1);
 }
 
 .board {
   position: relative;
   margin: auto;
-}
-
-.player {
-  background-image: url('../player.png');
-}
-
-.player.left {
-  transform: scaleX(-1);
-}
-
-.box {
-  background-image: url('../box.png');
 }
 
 .game-over {

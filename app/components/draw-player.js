@@ -2,19 +2,14 @@ import Ember from 'ember';
 import { SIZE } from 'sokoban/size';
 import { EKMixin } from 'ember-keyboard';
 import { getCode, keyDown } from 'ember-keyboard';
+import DrawCell from 'sokoban/components/draw-cell';
 
 const { computed, on } = Ember;
 
-const Component = Ember.Component.extend(EKMixin, {
-  classNames: ['cell', 'player'],
+export default DrawCell.extend(EKMixin, {
   classNameBindings: ['player.direction'],
-  attributeBindings: ['style'],
-  style: computed('player.{row,column}', function() {
-    let left = SIZE * this.get('player.column');
-    let top = SIZE * this.get('player.row');
 
-    return `left:${left}px;top:${top}px`;
-  }),
+  player: computed.readOnly('cell'),
 
   activateKeyboard: Ember.on('init', function() {
     this.set('keyboardActivated', true);
@@ -54,9 +49,3 @@ const Component = Ember.Component.extend(EKMixin, {
     this.attrs.onMove(direction);
   })
 });
-
-Component.reopenClass({
-  positionalParams: ['player']
-});
-
-export default Component;

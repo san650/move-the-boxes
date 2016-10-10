@@ -1,6 +1,9 @@
 {{#each board.rows as |rows|}}
-  {{#each rows as |cell|}}
-    {{draw-cell cell}}
+  {{#each rows as |cells|}}
+    {{#each cells as |cell|}}
+      {{draw-cell cell}}
+    {{/each}}
   {{/each}}
 {{/each}}
+
 {{yield}}
