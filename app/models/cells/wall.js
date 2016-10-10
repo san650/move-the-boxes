@@ -1,4 +1,4 @@
-import Cell from 'sokoban/models/cell';
+import Cell from './cell';
 
 export default Cell.extend({
   kind: ['wall']

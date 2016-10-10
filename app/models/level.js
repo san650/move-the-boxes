@@ -1,7 +1,11 @@
 import Ember from 'ember';
-import Player from 'sokoban/models/player';
-import Board from 'sokoban/models/board';
-import Box from 'sokoban/models/box';
+import {
+  createBoard,
+  createBox,
+  createPlayer,
+  createTarget,
+  createWall
+} from 'sokoban/models/factory';
 
 const { computed, debug } = Ember;
 
@@ -16,28 +20,20 @@ export default Ember.Object.extend({
       [5,0], [5,1], [5,2], [5,3], [5,4], [5,5]
     ];
 
-    let board = Board.create({ rowCount: 6, columnCount: 6 });
+    let board = createBoard(6, 6);
 
     wall.forEach(([row, column]) => {
-      board.pushCell(board.createWall(row, column));
+      board.pushCell(createWall(row, column));
     });
 
-    let box = board.createBox(2, 3);
-    board.pushCell(box);
-    this.set('box', box);
-
-    let target = board.createTarget(3, 1);
-    board.pushCell(target);
-    this.set('target', target);
+    board.pushCell(createBox(2, 3));
+    board.pushCell(createTarget(3, 1));
 
     return board;
   }),
 
   player: computed(function() {
-    return Player.create({
-      row: 3,
-      column: 0
-    });
+    return createPlayer(3, 0);
   }),
 
   up() {

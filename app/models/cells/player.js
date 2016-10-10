@@ -1,4 +1,5 @@
-import Cell from 'sokoban/models/cell';
+import Ember from 'ember';
+import Cell from './cell';
 
 const { computed } = Ember;
 

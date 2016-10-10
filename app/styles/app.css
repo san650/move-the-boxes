@@ -14,7 +14,8 @@
 }
 
 .kind--ground {
-  background-color: white;
+  background-color: #564500;
+  background-image: url('../ground.png');
   z-index: var(--layer-background);
 }
 

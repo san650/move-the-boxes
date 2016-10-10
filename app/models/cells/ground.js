@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import Cell from 'sokoban/models/cell';
+import Cell from './cell';
 
 const { computed } = Ember;
 
@@ -14,7 +14,7 @@ export default Cell.extend({
     return true;
   }),
 
-  moveTo(row, column) {
+  moveTo() {
     // Although it's marked as can be moved, it
     // can't actually be moved
   }

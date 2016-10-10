@@ -1,8 +1,6 @@
 import Ember from 'ember';
-import { SIZE } from 'sokoban/size';
-import { EKMixin } from 'ember-keyboard';
-import { getCode, keyDown } from 'ember-keyboard';
 import DrawCell from 'sokoban/components/draw-cell';
+import { EKMixin, getCode, keyDown } from 'ember-keyboard';
 
 const { computed, on } = Ember;
 
@@ -11,7 +9,7 @@ export default DrawCell.extend(EKMixin, {
 
   player: computed.readOnly('cell'),
 
-  activateKeyboard: Ember.on('init', function() {
+  activateKeyboard: on('init', function() {
     this.set('keyboardActivated', true);
   }),
 

@@ -13,6 +13,14 @@ export default Ember.Object.extend({
   // Properties
   kind: ['cell'],
 
+  isTarget: computed(function() {
+    return false;
+  }),
+
+  isBox: computed(function() {
+    return false;
+  }),
+
   occupiesSpace: computed(function() {
     return true;
   }),
