@@ -1,7 +1,6 @@
 import Ember from 'ember';
 import RowEnumerable from 'sokoban/models/board/row-enumerable';
 import CellMap from 'sokoban/models/board/cell-map';
-import { createGround, createGroup } from 'sokoban/models/factory';
 
 const { computed } = Ember;
 

@@ -1,4 +1,3 @@
-import Ember from 'ember';
 import Ground from './cells/ground';
 import Wall from './cells/wall';
 import Box from './cells/box';
