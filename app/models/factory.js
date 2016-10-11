@@ -4,6 +4,7 @@ import Box from './cells/box';
 import Target from './cells/target';
 import Player from './cells/player';
 import Group from './cells/group';
+import Water from './cells/water';
 import Board from './board';
 
 export function createWall(row, column) {
@@ -12,6 +13,10 @@ export function createWall(row, column) {
 
 export function createGround(row, column) {
   return Ground.create({ row, column });
+}
+
+export function createWater(row, column) {
+  return Water.create({ row, column });
 }
 
 export function createBox(row, column) {

@@ -53,6 +53,12 @@ a:visited {
   z-index: var(--layer-wall);
 }
 
+.kind--water {
+  background-color: transparent;
+  background-image: url('../water.png');
+  z-index: var(--layer-background);
+}
+
 .kind--box {
   background-image: url('../box.png');
   z-index: var(--layer-npc);

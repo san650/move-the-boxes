@@ -5,7 +5,8 @@ import {
   createBox,
   createPlayer,
   createTarget,
-  createWall
+  createWall,
+  createWater
 } from 'sokoban/models/factory';
 
 const { computed } = Ember;
@@ -16,7 +17,7 @@ export default Level.extend({
       ##############
       ##xx  ##  xx##
       ##  oo  oo  ##
-      ##  ##  ##  ##
+      ##  ww  ww  ##
       ##  oo      ##
       ##    ##  xx##
       ##############
@@ -43,6 +44,9 @@ export default Level.extend({
           break;
           case 'o':
             board.pushCell(createBox(j, i));
+          break;
+          case 'w':
+            board.pushCell(createWater(j, i));
           break;
         }
       }
