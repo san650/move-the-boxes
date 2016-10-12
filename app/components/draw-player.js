@@ -2,13 +2,9 @@ import Ember from 'ember';
 import DrawCell from 'sokoban/components/draw-cell';
 import { EKMixin, getCode, keyDown } from 'ember-keyboard';
 
-const { computed, on } = Ember;
+const { on } = Ember;
 
 export default DrawCell.extend(EKMixin, {
-  classNameBindings: ['player.direction'],
-
-  player: computed.readOnly('cell'),
-
   activateKeyboard: on('init', function() {
     this.set('keyboardActivated', true);
   }),

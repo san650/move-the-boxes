@@ -41,15 +41,6 @@ export default Ember.Object.extend({
     return this.get('cells').at(row, column);
   },
 
-  isEmpty(row, column) {
-    return this.isInsideLimits(row, column) &&
-      !this.at(row, column).get('occupiesSpace');
-  },
-
-  canBeMoved(row, column) {
-    return this.at(row, column).get('canBeMoved');
-  },
-
   targetsFulfilled() {
     let boxes = this.get('cells.data').filterBy('isBox');
     let targets = this.get('cells.data').filterBy('isTarget');

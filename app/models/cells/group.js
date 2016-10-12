@@ -18,20 +18,33 @@ export default Cell.extend(Ember.Enumerable, {
     }
   }),
 
-  occupiesSpace: computed(function() {
-    return this.get('cells').isAny('occupiesSpace');
+  hasMass: computed(function() {
+    return this.get('cells').isAny('hasMass');
   }),
 
-  canBeMoved: computed(function() {
-    return this.get('cells').isEvery('canBeMoved');
+  isMobile: computed(function() {
+    let withMass = this.get('cells').filterBy('hasMass');
+
+    // Has at least one element with mass and all element with mass are mobile
+    return withMass.length > 0 && withMass.isEvery('isMobile');
   }),
 
   // Methods
-  nextObject(index) {
-    return this.get('cells')[index];
+  canBeOccupiedBy(by) {
+    return this.get('cells').every((cell) => cell.canBeOccupiedBy(by));
   },
 
-  moveTo(row, column) {
-    this.get('cells').forEach((cell) => cell.moveTo(row, column));
+  canBeMoved(by, to) {
+    let withMass = this.get('cells').filterBy('hasMass');
+
+    return this.get('isMobile') && withMass.every((cell) => to.canBeOccupiedBy(cell));
+  },
+
+  move(row, column) {
+    this.get('cells').forEach((cell) => cell.move(row, column));
+  },
+
+  nextObject(index) {
+    return this.get('cells')[index];
   }
 });

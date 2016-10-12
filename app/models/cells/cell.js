@@ -1,7 +1,5 @@
 import Ember from 'ember';
 
-const { computed } = Ember;
-
 export default Ember.Object.extend({
   // Configuration
   concatenatedProperties: ['kind'],
@@ -13,26 +11,26 @@ export default Ember.Object.extend({
   // Properties
   kind: ['cell'],
 
-  isTarget: computed(function() {
-    return false;
-  }),
-
-  isBox: computed(function() {
-    return false;
-  }),
-
-  occupiesSpace: computed(function() {
-    return true;
-  }),
-
-  canBeMoved: computed(function() {
-    return false;
-  }),
+  hasMass: false,
+  isMobile: false,
+  isTarget: false,
+  isBox: false,
 
   // Methods
-  moveTo(row, column) {
-    if (this.get('canBeMoved')) {
-      this.setProperties({ row, column });
+  canBeOccupiedBy(/*by*/) {
+    return !this.get('hasMass');
+  },
+
+  canBeMoved(by, to) {
+    return this.get('isMobile') && to.canBeOccupiedBy(this);
+  },
+
+  move(to) {
+    if (this.get('hasMass') && this.get('isMobile')) {
+      this.setProperties({
+        row: to.get('row'),
+        column: to.get('column')
+      });
     }
   }
 });

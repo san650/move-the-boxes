@@ -1,10 +1,12 @@
-import Ground from './cells/ground';
-import Wall from './cells/wall';
+import Arrow from './cells/arrow';
 import Box from './cells/box';
-import Target from './cells/target';
-import Player from './cells/player';
+import Ground from './cells/ground';
 import Group from './cells/group';
+import Player from './cells/player';
+import Target from './cells/target';
+import Wall from './cells/wall';
 import Water from './cells/water';
+
 import Board from './board';
 
 export function createWall(row, column) {
@@ -31,8 +33,12 @@ export function createPlayer(row, column) {
   return Player.create({ row, column });
 }
 
-export function createGroup(row, columns, cells) {
-  return Group.create({ row, columns, cells });
+export function createGroup(row, column, cells) {
+  return Group.create({ row, column, cells });
+}
+
+export function createArrow(row, column, direction) {
+  return Arrow.create({ row, column, direction });
 }
 
 export function createBoard(rowCount, columnCount) {

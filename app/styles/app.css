@@ -1,9 +1,10 @@
 :root {
   --layer-background: 0;
   --layer-wall: 1;
-  --layer-npc: 2;
-  --layer-pc: 3;
-  --layer-osd: 4;
+  --layer-sign: 2;
+  --layer-npc: 3;
+  --layer-pc: 4;
+  --layer-osd: 5;
 }
 
 html {
@@ -31,12 +32,36 @@ a:visited {
   transition: left .2s, top .2s;
   background: transparent none 50% 50% no-repeat;
   background-size: contain;
+  border-right: 1px solid rgba(0,0,0,.1);
+  border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
 .kind--ground {
   background-color: #564500;
   background-image: url('../ground.png');
   z-index: var(--layer-background);
+}
+
+.kind--arrow {
+  border: none;
+  background-image: url('../arrow-left.png');
+  background-size: 50%;
+  opacity: 0.4;
+  z-index: var(--layer-sign);
+
+  animation: 1s ease-in-out 0s infinite alternate shake-horizontal;
+}
+
+.kind--arrow.right {
+  background-image: url('../arrow-right.png');
+}
+
+.kind--arrow.up {
+  background-image: url('../arrow-up.png');
+}
+
+.kind--arrow.down {
+  background-image: url('../arrow-down.png');
 }
 
 .kind--target {
@@ -122,5 +147,14 @@ a:visited {
   }
   to {
     transform: rotate(30deg);
+  }
+}
+
+@keyframes shake-horizontal {
+  from {
+    transform: translateX(10px);
+  }
+  to {
+    transform: translateX(0px);
   }
 }

@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const { computed, debug } = Ember;
+const { computed } = Ember;
 
 export default Ember.Object.extend({
   board: null,
@@ -47,33 +47,20 @@ export default Ember.Object.extend({
 
     let board = this.get('board');
     let player = this.get('player');
+    let to = board.at(row, column);
+    let side = board.at(row + offsetRow, column + offsetColumn);
 
-    if (board.isEmpty(row, column)) {
-      player.moveTo(row, column);
-    } else if (this.canBeMoved(row, column)) {
-      if (this.tryMoveBox({ row, column } , { row: row + offsetRow, column: column + offsetColumn })) {
-        player.moveTo(row, column);
+    if (board.isInsideLimits(row, column)) {
+      if (to.canBeOccupiedBy(player)) {
+        player.move(to);
+        board.targetsFulfilled();
       } else {
-        debug('cannot be moved');
+        if (to.canBeMoved(player, side)) {
+          player.move(to);
+          to.move(side);
+          board.targetsFulfilled();
+        }
       }
-    } else {
-      debug('is wall');
-    }
-  },
-
-  canBeMoved(row, column) {
-    let board = this.get('board');
-
-    return board.at(row, column).get('canBeMoved');
-  },
-
-  tryMoveBox(origin, target) {
-    let board = this.get('board');
-
-    if (board.isEmpty(target.row, target.column)) {
-      board.at(origin.row, origin.column).moveTo(target.row, target.column);
-
-      return true;
     }
   }
 });

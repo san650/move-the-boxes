@@ -5,7 +5,7 @@ const { computed } = Ember;
 
 const Component = Ember.Component.extend({
   classNames: ['cell'],
-  classNameBindings: ['cellType'],
+  classNameBindings: ['cellType', 'cell.direction'],
   attributeBindings: ['style'],
 
   style: computed('cell.{row,column}', function() {
