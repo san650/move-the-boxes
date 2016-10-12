@@ -1,0 +1,9 @@
+<p class="level-over--box">
+  <span class="level-over--reward {{image}}"></span>
+  <span class="level-over--message">LEVEL COMPLETED</span>
+  {{#if next}}
+    {{#link-to 'level' next class="level-over--link"}}
+      next level
+    {{/link-to}}
+  {{/if}}
+</p>

@@ -12,6 +12,8 @@ import {
 const { computed } = Ember;
 
 export default Level.extend({
+  minMoves: 29,
+
   board: computed(function() {
     let map = `
       ##############

@@ -4,11 +4,6 @@
   {{/draw-board}}
 
   {{#if level.won}}
-    <p class="level-over">
-      <span class="level-over--message">LEVEL COMPLETED</span>
-      {{#if nextLevel}}
-        {{#link-to 'level' nextLevel}}next level{{/link-to}}
-      {{/if}}
-    </p>
+    {{level-over level next=nextLevel}}
   {{/if}}
 </div>

@@ -123,11 +123,54 @@ a:visited {
   font-size: 2rem;
 }
 
+.level-over--box {
+  position: relative;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.level-over--reward {
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  left: 40px;
+  top: -120px;
+
+  animation: .5s ease-in-out both oh-resize;
+
+  background: transparent url('../win-1.png') no-repeat 0 0;
+  background-size: cover;
+}
+
+.level-over--reward__0 {
+  background-image: url('../win-0.png');
+}
+
+.level-over--reward__1 {
+  background-image: url('../win-1.png');
+}
+
+.level-over--reward__2 {
+  background-image: url('../win-2.png');
+}
+
+.level-over--reward__3 {
+  background-image: url('../win-3.png');
+}
+
 .level-over--message {
+  position: relative;
   font-size: 3rem;
   font-weight: bold;
+  color: black;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff;
   display: block;
+  background-color: rgba(0,0,0,.1);
+  border-radius: 30px;
+}
+
+.level-over--link {
+  position: relative;
 }
 
 .container {
@@ -156,5 +199,14 @@ a:visited {
   }
   to {
     transform: translateX(0px);
+  }
+}
+
+@keyframes oh-resize {
+  from {
+    transform: scale(0.1) rotate(-23deg);
+  }
+  to {
+    transform: scale(1) rotate(-23deg);
   }
 }

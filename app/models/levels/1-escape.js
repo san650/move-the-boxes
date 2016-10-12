@@ -11,6 +11,8 @@ import {
 const { computed } = Ember;
 
 export default Level.extend({
+  minMoves: 23,
+
   board: computed(function() {
     let wall = [
       [0,0], [0,1], [0,2], [0,3]              ,

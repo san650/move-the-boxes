@@ -5,6 +5,8 @@ const { computed } = Ember;
 export default Ember.Object.extend({
   board: null,
   player: null,
+  minMoves: 2,
+  moves: 0,
 
   won: computed('player.{row,column}', function() {
     return this.get('board').targetsFulfilled();
@@ -52,10 +54,12 @@ export default Ember.Object.extend({
 
     if (board.isInsideLimits(row, column)) {
       if (to.canBeOccupiedBy(player)) {
+        this.incrementProperty('moves');
         player.move(to);
         board.targetsFulfilled();
       } else {
-        if (to.canBeMoved(player, side)) {
+        if (board.isInsideLimits(row + offsetRow, column + offsetColumn) && to.canBeMoved(player, side)) {
+          this.incrementProperty('moves');
           player.move(to);
           to.move(side);
           board.targetsFulfilled();
