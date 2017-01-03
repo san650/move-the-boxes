@@ -45,6 +45,15 @@ export default Ember.Object.extend({
     let boxes = this.get('cells.data').filterBy('isBox');
     let targets = this.get('cells.data').filterBy('isTarget');
 
+    targets.every((target) => {
+      boxes.forEach((box) => box.set('isFulfilled', false));
+
+      boxes
+        .filterBy('row', target.get('row'))
+        .filterBy('column', target.get('column'))
+        .forEach((box) => box.set('isFulfilled', true));
+    });
+
     return targets.every(
       (target) => boxes
         .filterBy('row', target.get('row'))
