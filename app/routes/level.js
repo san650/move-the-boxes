@@ -33,6 +33,10 @@ export default Ember.Route.extend({
       slug = 'herodoto';
     } else if (model.constructor === Herodoto) {
       slug = 'ninja';
+    } else if (model.constructor === Ninja) {
+      slug = 'elixir';
+    } else if (model.constructor === Elixir) {
+      slug = 'pollock';
     }
 
     controller.set('level', model);
