@@ -5,6 +5,7 @@ import Dune from 'sokoban/models/levels/2-dune';
 import Herodoto from 'sokoban/models/levels/3-herodoto';
 import Ninja from 'sokoban/models/levels/4-ninja';
 import Elixir from 'sokoban/models/levels/5-elixir';
+import Pollock from 'sokoban/models/levels/6-pollock';
 
 const Levels = {
   tutorial: Tutorial,
@@ -12,7 +13,8 @@ const Levels = {
   dune: Dune,
   herodoto: Herodoto,
   ninja: Ninja,
-  elixir: Elixir
+  elixir: Elixir,
+  pollock: Pollock
 };
 
 export default Ember.Route.extend({
