@@ -16,13 +16,17 @@ export default DrawCell.extend(EKMixin, {
 
   moveTask: task(function * (direction) {
     this.attrs.onMove(direction);
-    yield timeout(100);
-  }).drop(),
+    yield timeout(200);
+  }).keepLatest(),
 
   walkAnimationTask: task(function * () {
     this.set('walk', true);
+    yield timeout(66)
+    this.set('walk', false);
+    yield timeout(66);
+    this.set('walk', true);
     this.toggleProperty('walkInvert');
-    yield timeout(300);
+    yield timeout(66);
     this.set('walk', false);
   }).drop(),
 
