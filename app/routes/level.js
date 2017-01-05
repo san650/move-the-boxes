@@ -4,13 +4,15 @@ import Escape from 'sokoban/models/levels/1-escape';
 import Dune from 'sokoban/models/levels/2-dune';
 import Herodoto from 'sokoban/models/levels/3-herodoto';
 import Ninja from 'sokoban/models/levels/4-ninja';
+import Elixir from 'sokoban/models/levels/5-elixir';
 
 const Levels = {
   tutorial: Tutorial,
   escape: Escape,
   dune: Dune,
   herodoto: Herodoto,
-  ninja: Ninja
+  ninja: Ninja,
+  elixir: Elixir
 };
 
 export default Ember.Route.extend({
