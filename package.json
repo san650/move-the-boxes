@@ -1,7 +1,7 @@
 {
-  "name": "sokoban",
+  "name": "move-the-boxes",
   "version": "0.0.0",
-  "description": "Sokoban game implemented in Ember",
+  "description": "Sokoban like game implemented in Ember",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -12,7 +12,7 @@
     "start": "ember server",
     "test": "ember test"
   },
-  "repository": "https://github.com/san650/ember-sokoban.git",
+  "repository": "https://github.com/san650/move-the-boxes.git",
   "engines": {
     "node": ">= 0.10.0"
   },
