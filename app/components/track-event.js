@@ -8,14 +8,10 @@ export default Ember.Component.extend({
   tagName: '',
 
   track: on('didInsertElement', function() {
-    let level = this.get('level');
-
-    if (level.get('won')) {
-      this.get('metrics').trackEvent({
-        action: 'finish level',
-        label: level.get('slug'),
-        value: level.get('moves')
-      });
-    }
+    this.get('metrics').trackEvent({
+      action: this.get('action'),
+      label: this.get('label'),
+      value: this.get('value')
+    });
   })
 });
