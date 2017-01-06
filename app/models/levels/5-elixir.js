@@ -5,20 +5,20 @@ import Forgery from 'sokoban/mixins/forgery';
 const { computed } = Ember;
 
 const MAP = `
-XXXXX   XXXXXXXXXXXXX
-XXXXX*  XXXXXXXXXXXXX
-XXXXX  *XXXXXXXXXXXXX
-XXX  *  * XXXXXXXXXXX
-XXX X XXX XXXXXXXXXXX
-X   X XXX XXXXXXX  ..
-X *  *             ..
-XXXXX XXXX X@XXXX  ..
-XXXXX      XXX  XXXXX
+~~~~X   X~~~~~~~~~
+~~~~X*  X~~~~~~~~~
+~~~XX  *XXX~~~~~~~
+~~X  *  * X~~~~~~~
+~XX X XXX X~~~XXXX
+X   X XXX XXXX  ..
+X *  *          ..
+XXXXX XXXX X@X  ..
+~~~~X      XXXXXXX
 `;
 
 export default Level.extend(Forgery, {
   minMoves: 13,
-  zoom: 0.6,
+  zoom: 0.8,
 
   board: computed(function() {
     return this.boardFromString(MAP);

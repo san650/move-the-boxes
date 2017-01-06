@@ -2,10 +2,11 @@ import Ember from 'ember';
 import { SIZE } from 'sokoban/size';
 
 const { computed } = Ember;
+const VARIANT_COUNT = 10;
 
 const Component = Ember.Component.extend({
   classNames: ['cell'],
-  classNameBindings: ['cellType', 'cell.direction', 'cell.isFulfilled'],
+  classNameBindings: ['cellType', 'cell.direction', 'cell.isFulfilled', 'variant'],
   attributeBindings: ['style'],
 
   style: computed('cell.{row,column}', function() {
@@ -17,6 +18,12 @@ const Component = Ember.Component.extend({
 
   cellType: computed('cell', function() {
     return this.get('cell.kind').map((kind) => `kind--${kind}`).join(' ');
+  }),
+
+  variant: computed(function() {
+    let variant = Math.round(Math.random(VARIANT_COUNT) * VARIANT_COUNT);
+
+    return `kind--variant-${variant}`;
   })
 });
 

@@ -1,6 +1,6 @@
-import Ground from './ground';
+import Cell from './cell';
 
-export default Ground.extend({
+export default Cell.extend({
   kind: ['target'],
 
   isTarget: true

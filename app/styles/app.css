@@ -1,9 +1,9 @@
 :root {
   --layer-background: 0;
-  --layer-wall: 1;
-  --layer-sign: 2;
-  --layer-npc: 3;
-  --layer-pc: 4;
+  --layer-sign: 1;
+  --layer-npc: 2;
+  --layer-pc: 3;
+  --layer-wall: 4;
   --layer-osd: 5;
 }
 
@@ -43,6 +43,18 @@ a:visited {
   z-index: var(--layer-background);
   border-right: 1px solid rgba(0,0,0,.1);
   border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.kind--ground.kind--variant-0 {
+  background-image: url('../ground-variant-0.png'), url('../ground.png');
+}
+
+.kind--ground.kind--variant-1 {
+  background-image: url('../ground-variant-1.png'), url('../ground.png');
+}
+
+.kind--ground.kind--variant-2 {
+  background-image: url('../ground-variant-2.png'), url('../ground.png');
 }
 
 .kind--arrow {
