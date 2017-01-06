@@ -15,6 +15,7 @@ export default Ember.Object.extend({
   isMobile: false,
   isTarget: false,
   isBox: false,
+  needsGround: true,
 
   // Methods
   canBeOccupiedBy(/*by*/) {

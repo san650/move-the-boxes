@@ -6,6 +6,7 @@ import Player from './cells/player';
 import Target from './cells/target';
 import Wall from './cells/wall';
 import Water from './cells/water';
+import Void from './cells/void';
 
 import Board from './board';
 
@@ -39,6 +40,10 @@ export function createGroup(row, column, cells) {
 
 export function createArrow(row, column, direction) {
   return Arrow.create({ row, column, direction });
+}
+
+export function createVoid(row, column) {
+  return Void.create({ row, column });
 }
 
 export function createBoard(rowCount, columnCount) {

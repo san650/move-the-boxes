@@ -5,16 +5,16 @@ import Forgery from 'sokoban/mixins/forgery';
 const { computed } = Ember;
 
 const MAP = `
-        XXXXXXXX 
-        X     @X 
-        X *X* XX 
-        X *  *X  
-        XX* * X  
+~~~~~~~~XXXXXXXX~
+~~~~~~~~X     @X~
+~~~~~~~~X *X* XX~
+~~~~~~~~X *  *X~~
+~~~~~~~~XX* * X~~
 XXXXXXXXX * X XXX
 X....  XX *  *  X
 XX...    *  *   X
 X....  XXXXXXXXXX
-XXXXXXXX 
+XXXXXXXX~~~~~~~~~
 `;
 
 export default Level.extend(Forgery, {
