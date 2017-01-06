@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import Level from 'move-the-boxes/models/level';
+import extendLevel from 'move-the-boxes/models/level';
 import Forgery from 'move-the-boxes/mixins/forgery';
 
 const { computed } = Ember;
@@ -17,7 +17,7 @@ X....  XXXXXXXXXX
 XXXXXXXX~~~~~~~~~
 `;
 
-export default Level.extend(Forgery, {
+export default extendLevel('pollock', Forgery, {
   minMoves: 13,
   zoom: 0.6,
 

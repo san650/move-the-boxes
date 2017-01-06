@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import Level from 'move-the-boxes/models/level';
+import extendLevel from 'move-the-boxes/models/level';
 import {
   createBoard,
   createBox,
@@ -10,7 +10,7 @@ import {
 
 const { computed } = Ember;
 
-export default Level.extend({
+export default extendLevel('dune', {
   minMoves: 63,
 
   board: computed(function() {
