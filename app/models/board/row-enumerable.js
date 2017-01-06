@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import CellEnumerable from 'sokoban/models/board/cell-enumerable';
+import CellEnumerable from 'move-the-boxes/models/board/cell-enumerable';
 
 const { computed } = Ember;
 

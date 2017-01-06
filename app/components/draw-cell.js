@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import { SIZE } from 'sokoban/size';
+import { SIZE } from 'move-the-boxes/size';
 
 const { computed } = Ember;
 const VARIANT_COUNT = 10;

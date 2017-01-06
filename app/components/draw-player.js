@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import DrawCell from 'sokoban/components/draw-cell';
+import DrawCell from 'move-the-boxes/components/draw-cell';
 import { EKMixin, getCode, keyDown } from 'ember-keyboard';
 import hbs from 'htmlbars-inline-precompile';
 import { task, timeout } from 'ember-concurrency';

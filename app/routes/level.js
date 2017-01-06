@@ -1,12 +1,12 @@
 import Ember from 'ember';
-import Tutorial from 'sokoban/models/levels/0-tutorial';
-import Escape from 'sokoban/models/levels/1-escape';
-import Dune from 'sokoban/models/levels/2-dune';
-import Herodoto from 'sokoban/models/levels/3-herodoto';
-import Ninja from 'sokoban/models/levels/4-ninja';
-import Elixir from 'sokoban/models/levels/5-elixir';
-import Pollock from 'sokoban/models/levels/6-pollock';
-import Phoenix from 'sokoban/models/levels/7-phoenix';
+import Tutorial from 'move-the-boxes/models/levels/0-tutorial';
+import Escape from 'move-the-boxes/models/levels/1-escape';
+import Dune from 'move-the-boxes/models/levels/2-dune';
+import Herodoto from 'move-the-boxes/models/levels/3-herodoto';
+import Ninja from 'move-the-boxes/models/levels/4-ninja';
+import Elixir from 'move-the-boxes/models/levels/5-elixir';
+import Pollock from 'move-the-boxes/models/levels/6-pollock';
+import Phoenix from 'move-the-boxes/models/levels/7-phoenix';
 
 const Levels = {
   tutorial: Tutorial,

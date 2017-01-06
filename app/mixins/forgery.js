@@ -8,7 +8,7 @@ import {
   createVoid,
   createWall,
   createWater
-} from 'sokoban/models/factory';
+} from 'move-the-boxes/models/factory';
 
 export default Ember.Mixin.create({
   mapFromString(string) {

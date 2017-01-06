@@ -1,12 +1,12 @@
 import Ember from 'ember';
-import Level from 'sokoban/models/level';
+import Level from 'move-the-boxes/models/level';
 import {
   createBoard,
   createBox,
   createPlayer,
   createTarget,
   createWall
-} from 'sokoban/models/factory';
+} from 'move-the-boxes/models/factory';
 
 const { computed } = Ember;
 

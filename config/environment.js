@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'sokoban',
+    modulePrefix: 'move-the-boxes',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
