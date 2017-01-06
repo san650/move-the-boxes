@@ -5,6 +5,7 @@ import {
   createBox,
   createPlayer,
   createTarget,
+  createVoid,
   createWall,
   createWater
 } from 'sokoban/models/factory';
@@ -43,6 +44,8 @@ export default Ember.Mixin.create({
           case '<':
             board.pushCell(createArrow(j, i, 'left'));
           break;
+          case '~':
+            board.pushCell(createVoid(j, i));
         }
       }
     }

@@ -14,12 +14,11 @@ export default Ember.Object.extend({
 
   // Methods
   at(row, column) {
-    let cells = [
-      createGround(row, column)
-    ].concat(
-      this.get('data')
-      .filterBy('row', row)
-      .filterBy('column', column));
+    let cells = this.get('data').filterBy('row', row).filterBy('column', column);
+
+    if (cells.every((cell) => cell.get('needsGround'))) {
+      cells.unshift(createGround(row, column));
+    }
 
     return createGroup(row, column, cells);
   },
