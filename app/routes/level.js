@@ -6,6 +6,7 @@ import Herodoto from 'sokoban/models/levels/3-herodoto';
 import Ninja from 'sokoban/models/levels/4-ninja';
 import Elixir from 'sokoban/models/levels/5-elixir';
 import Pollock from 'sokoban/models/levels/6-pollock';
+import Phoenix from 'sokoban/models/levels/7-phoenix';
 
 const Levels = {
   tutorial: Tutorial,
@@ -14,7 +15,8 @@ const Levels = {
   herodoto: Herodoto,
   ninja: Ninja,
   elixir: Elixir,
-  pollock: Pollock
+  pollock: Pollock,
+  phoenix: Phoenix
 };
 
 const { inject } = Ember;
@@ -45,6 +47,8 @@ export default Ember.Route.extend({
       slug = 'elixir';
     } else if (model.constructor === Elixir) {
       slug = 'pollock';
+    } else if (model.constructor === Pollock) {
+      slug = 'phoenix'
     }
 
     controller.set('level', model);
