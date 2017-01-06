@@ -18,7 +18,7 @@ export default Ember.Object.extend({
     let column = this.get('player.column');
     this.set('player.direction', 'up');
 
-    this.move(row, column, [-1,0]);
+    return this.move(row, column, [-1,0]);
   },
 
   down() {
@@ -26,7 +26,7 @@ export default Ember.Object.extend({
     let column = this.get('player.column');
     this.set('player.direction', 'down');
 
-    this.move(row, column, [1,0]);
+    return this.move(row, column, [1,0]);
   },
 
   left() {
@@ -34,7 +34,7 @@ export default Ember.Object.extend({
     let column = this.get('player.column') - 1;
     this.set('player.direction', 'left');
 
-    this.move(row, column, [0,-1]);
+    return this.move(row, column, [0,-1]);
   },
 
   right() {
@@ -42,7 +42,7 @@ export default Ember.Object.extend({
     let column = this.get('player.column') + 1;
     this.set('player.direction', 'right');
 
-    this.move(row, column, [0,1]);
+    return this.move(row, column, [0,1]);
   },
 
   move(row, column, [offsetRow, offsetColumn]) {
@@ -60,12 +60,14 @@ export default Ember.Object.extend({
         this.incrementProperty('moves');
         player.move(to);
         board.targetsFulfilled();
+        return true;
       } else {
         if (board.isInsideLimits(row + offsetRow, column + offsetColumn) && to.canBeMoved(player, side)) {
           this.incrementProperty('moves');
           player.move(to);
           to.move(side);
           board.targetsFulfilled();
+          return true;
         }
       }
     }

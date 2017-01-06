@@ -260,6 +260,23 @@ a:visited {
   clear: both;
 }
 
+.score-board {
+  font-family: "Courier New", Monospace;
+  font-size: 60px;
+  color: #FA6900;
+  position: fixed;
+  top: 5px;
+  right: 0;
+}
+
+.score-board p {
+  margin: 0 20px 0;
+}
+
+.score-board--number {
+  font-weight: bold;
+}
+
 @keyframes swing {
   from {
     transform: rotate(0);
