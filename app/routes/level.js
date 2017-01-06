@@ -48,7 +48,7 @@ export default Ember.Route.extend({
     } else if (model.constructor === Elixir) {
       slug = 'pollock';
     } else if (model.constructor === Pollock) {
-      slug = 'phoenix'
+      slug = 'phoenix';
     }
 
     controller.set('level', model);
