@@ -1,6 +1,6 @@
 import Ember from 'ember';
-import Level from 'sokoban/models/level';
-import Forgery from 'sokoban/mixins/forgery';
+import Level from 'move-the-boxes/models/level';
+import Forgery from 'move-the-boxes/mixins/forgery';
 
 const { computed } = Ember;
 

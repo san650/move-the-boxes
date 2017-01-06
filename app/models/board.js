@@ -1,6 +1,6 @@
 import Ember from 'ember';
-import RowEnumerable from 'sokoban/models/board/row-enumerable';
-import CellMap from 'sokoban/models/board/cell-map';
+import RowEnumerable from 'move-the-boxes/models/board/row-enumerable';
+import CellMap from 'move-the-boxes/models/board/cell-map';
 
 const { computed } = Ember;
 

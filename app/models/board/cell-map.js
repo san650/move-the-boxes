@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import { createGround, createGroup } from 'sokoban/models/factory';
+import { createGround, createGroup } from 'move-the-boxes/models/factory';
 
 const { computed } = Ember;
 

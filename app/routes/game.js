@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import Game from 'sokoban/models/game';
+import Game from 'move-the-boxes/models/game';
 
 export default Ember.Route.extend({
   model() {
