@@ -9,8 +9,15 @@ const Component = Ember.Component.extend({
   style: computed('board.{rowCount,columnCount}', function() {
     let width = SIZE * this.get('board.columnCount');
     let height = SIZE * this.get('board.rowCount');
+    let zoom = this.get('zoom');
 
-    return `width:${width}px;height:${height}px`;
+    if (zoom !== 1) {
+      zoom = `transform:scale(${zoom});transform-origin(0,0);`;
+    } else {
+      zoom = "";
+    }
+
+    return `width:${width}px;height:${height}px;${zoom}`;
   })
 });
 
