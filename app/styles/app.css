@@ -237,6 +237,7 @@ a:visited {
 }
 
 .level-over--link {
+  cursor: pointer;
   position: relative;
   animation-name: level-over-link;
   animation-fill-mode: both;
@@ -323,6 +324,7 @@ a:visited {
 
 .score-board table {
   width: auto;
+  font-size: 40px;
 }
 
 .score-board p {

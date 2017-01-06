@@ -6,8 +6,9 @@
   </div>
 
   {{#if level.won}}
-    {{level-over level next=nextLevel}}
+    {{level-over level hasNextLevel=hasNextLevel on-next=(route-action "nextLevel" level)}}
+    {{track-event level=level}}
   {{/if}}
 
-  {{score-board}}
+  {{score-board level}}
 </div>

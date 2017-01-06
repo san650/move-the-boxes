@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 const { computed } = Ember;
 
-export default Ember.Object.extend({
+const Level = Ember.Object.extend({
   board: null,
   player: null,
   zoom: 1,
@@ -73,3 +73,13 @@ export default Ember.Object.extend({
     }
   }
 });
+
+function extend(slug, ...mixins) {
+  let NewLevel = Level.extend({ slug }, ...mixins);
+
+  NewLevel.reopenClass({ slug });
+
+  return NewLevel;
+}
+
+export default extend;

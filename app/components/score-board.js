@@ -1,8 +1,18 @@
 import Ember from 'ember';
 
-const { inject } = Ember;
+const { computed, inject } = Ember;
 
-export default Ember.Component.extend({
+const Component = Ember.Component.extend({
   classNames: ['score-board'],
-  score: inject.service()
+  score: inject.service(),
+
+  levelName: computed('level.slug', function() {
+    return this.get('level.slug').capitalize();
+  })
 });
+
+Component.reopenClass({
+  positionalParams: ['level']
+});
+
+export default Component;

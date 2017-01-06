@@ -17,7 +17,13 @@ const Component = Ember.Component.extend({
     }
 
     return `level-over--reward__${diff}`;
-  })
+  }),
+
+  actions: {
+    clickNext() {
+      this.get('on-next')();
+    }
+  }
 });
 
 Component.reopenClass({
