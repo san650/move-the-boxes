@@ -76,7 +76,7 @@ a:visited {
   animation: 1s ease-in-out 0s infinite alternate swing;
 }
 
-.kind--wall {
+.kind--wall:not(.kind--water) {
   background-color: rgb(150, 131, 53);
   z-index: var(--layer-wall);
   box-shadow: 5px 5px 0 5px rgb(68, 55, 5);
