@@ -1,7 +1,9 @@
 <div class="container">
-  {{#draw-board level.board zoom=level.zoom}}
-    {{draw-player level.player onMove=(route-action 'move' level)}}
-  {{/draw-board}}
+  <div class="container--inner" style="transform:scale({{level.zoom}})">
+    {{#draw-board level.board}}
+      {{draw-player level.player onMove=(route-action 'move' level)}}
+    {{/draw-board}}
+  </div>
 
   {{#if level.won}}
     {{level-over level next=nextLevel}}
