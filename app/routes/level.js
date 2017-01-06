@@ -17,7 +17,15 @@ const Levels = {
   pollock: Pollock
 };
 
+const { inject } = Ember;
+
 export default Ember.Route.extend({
+  score: inject.service(),
+
+  beforeModel() {
+    this.get('score').resetLevelMoves();
+  },
+
   model(params) {
     return Levels[params.level].create();
   },
@@ -45,7 +53,9 @@ export default Ember.Route.extend({
 
   actions: {
     move(level, direction) {
-      level[direction]();
+      if(level[direction]()) {
+        this.get('score').countMove();
+      }
     }
   }
 });

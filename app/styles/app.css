@@ -188,8 +188,8 @@ a:visited {
   margin: 0;
   padding-top: 250px;
   text-align: center;
-  font-family: monospace;
-  color: white;
+  font-family: "SFPixelateShadedRegular", Monospace;
+  color: #FA6900;
   font-size: 2rem;
 }
 
@@ -204,10 +204,8 @@ a:visited {
   height: 300px;
   position: absolute;
   left: 40px;
-  top: -120px;
-
+  top: -70px;
   animation: .5s ease-in-out both oh-resize;
-
   background: transparent url('../win-1.png') no-repeat 0 0;
   background-size: cover;
 }
@@ -230,10 +228,9 @@ a:visited {
 
 .level-over--message {
   position: relative;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bold;
-  color: black;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+  color: #FA6900;
   display: block;
   background-color: rgba(0,0,0,.1);
   border-radius: 30px;
@@ -241,6 +238,22 @@ a:visited {
 
 .level-over--link {
   position: relative;
+  animation-name: level-over-link;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-play-state: running;
+}
+
+@keyframes level-over-link {
+  from {
+    color: white;
+  }
+
+  to {
+    color: #FA6900;
+  }
 }
 
 .container {
@@ -296,3 +309,31 @@ a:visited {
     opacity: .7;
   }
 }
+
+.score-board {
+  font-family: "SFPixelateShadedRegular", Monospace;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 60px;
+  color: #FA6900;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.score-board table {
+  width: auto;
+}
+
+.score-board p {
+  margin: 0 20px 0;
+}
+
+.score-board--number {
+  display: block;
+  font-weight: bold;
+  min-width: 130px;
+  margin-left: 20px;
+  text-align: right;
+}
+
