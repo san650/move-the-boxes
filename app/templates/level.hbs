@@ -1,5 +1,5 @@
 <div class="container">
-  {{#draw-board level.board}}
+  {{#draw-board level.board zoom=level.zoom}}
     {{draw-player level.player onMove=(route-action 'move' level)}}
   {{/draw-board}}
 

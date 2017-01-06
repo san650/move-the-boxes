@@ -5,6 +5,7 @@ const { computed } = Ember;
 export default Ember.Object.extend({
   board: null,
   player: null,
+  zoom: 1,
   minMoves: 2,
   moves: 0,
 

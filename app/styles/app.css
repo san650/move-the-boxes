@@ -157,10 +157,9 @@ a:visited {
 
 .board {
   position: relative;
-  margin: auto;
+  margin: 0 auto;
   border: 1px solid rgba(0,0,0,0.3);
   border-radius: 4px;
-  margin-top: 180px;
   overflow: hidden;
 }
 
@@ -235,6 +234,7 @@ a:visited {
 .container {
   width: auto;
   margin-top: 40px;
+  position: relative;
 }
 
 .clearfix:after {

@@ -18,6 +18,7 @@ XXXXX      XXX  XXXXX
 
 export default Level.extend(Forgery, {
   minMoves: 13,
+  zoom: 0.6,
 
   board: computed(function() {
     return this.boardFromString(MAP);
