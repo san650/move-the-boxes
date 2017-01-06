@@ -21,7 +21,7 @@ export default DrawCell.extend(EKMixin, {
 
   walkAnimationTask: task(function * () {
     this.set('walk', true);
-    yield timeout(66)
+    yield timeout(66);
     this.set('walk', false);
     yield timeout(66);
     this.set('walk', true);
