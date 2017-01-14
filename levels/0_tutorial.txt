@@ -1,0 +1,13 @@
+-------------
+name: Tutorial
+slug: tutorial
+level: 0
+minMoves: 12
+zoom: 1
+-------------
+XXXXXX
+X  X X
+X  * X
+@. X X
+X    X
+XXXXXX

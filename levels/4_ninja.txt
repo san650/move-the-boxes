@@ -1,0 +1,13 @@
+-------------
+name: Ninja
+slug: ninja
+level: 4
+minMoves: 13 
+zoom: 1
+-------------
+XXXXXX
+X.>  X
+X X  X
+X@ * X
+X   XX
+XXXXXX

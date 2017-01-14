@@ -1,0 +1,13 @@
+-------------
+name: Escape
+slug: escape
+level: 1
+minMoves: 23
+zoom: 1
+-------------
+XXXX  
+X  *  
+X  *  
+@. X.X
+X    X
+XXXXXX

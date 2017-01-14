@@ -1,0 +1,20 @@
+-------------
+name: Phoenix
+slug: phoenix
+level: 7
+minMoves: 300
+zoom: 0.6
+-------------
+~~~~~~~~~~~~~~XXXXXXXX
+~~~~~~~~~~~~~~X  ....X
+~~~XXXXXXXXXXXX  ....X
+~~~X    X  * *   ....X
+~~~X ***X*  * X  ....X
+~~~X  *     * X  ....X
+~~~X ** X* * *XXXXXXXX
+XXXX  * X     X~~~~~~~
+X   X XXXXXXXXX~~~~~~~
+X    *  XX~~~~~~~~~~~~
+X **X** @X~~~~~~~~~~~~
+X   X   XX~~~~~~~~~~~~
+XXXXXXXXX~~~~~~~~~~~~~
