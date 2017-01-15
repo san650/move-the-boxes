@@ -1,7 +1,4 @@
 -------------
-name: Britomartis
-slug: britomartis
-level: 30
 minMoves: 750 
 zoom: 0.6 
 -------------

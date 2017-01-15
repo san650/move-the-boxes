@@ -1,7 +1,4 @@
 -------------
-name: Dune 
-slug: dune 
-level: 2
 minMoves: 63
 zoom: 1
 -------------

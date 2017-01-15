@@ -1,7 +1,4 @@
 -------------
-name: Memmon
-slug: memmon
-level: 27
 minMoves: 1000
 zoom: 0.5 
 -------------

@@ -1,7 +1,4 @@
 -------------
-name: Sarpedon
-slug: sarpedon
-level: 14
 minMoves: 1500
 zoom: 0.4 
 -------------

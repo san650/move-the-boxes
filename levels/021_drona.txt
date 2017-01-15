@@ -1,7 +1,4 @@
 -------------
-name: Drona
-slug: drona
-level: 21
 minMoves: 400
 zoom: 0.5 
 -------------

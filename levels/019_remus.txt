@@ -1,7 +1,4 @@
 -------------
-name: Remus
-slug: remus
-level: 19
 minMoves: 800
 zoom: 0.5 
 -------------

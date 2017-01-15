@@ -1,7 +1,4 @@
 -------------
-name: Clymene
-slug: clymene 
-level: 23
 minMoves: 900
 zoom: 0.48 
 -------------

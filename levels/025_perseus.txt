@@ -1,7 +1,4 @@
 -------------
-name: Perseus
-slug: perseus
-level: 25
 minMoves: 800
 zoom: 0.5 
 -------------

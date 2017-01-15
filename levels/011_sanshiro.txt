@@ -1,7 +1,4 @@
 -------------
-name: Sanshiro
-slug: sanshiro
-level: 11
 minMoves: 450
 zoom: 0.6
 -------------

@@ -1,7 +1,4 @@
 -------------
-name: Totoro
-slug: totoro 
-level: 9
 minMoves: 468
 zoom: 0.5 
 -------------

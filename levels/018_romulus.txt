@@ -1,7 +1,4 @@
 -------------
-name: Romulus
-slug: romulus
-level: 18
 minMoves: 840 
 zoom: 0.5 
 -------------

@@ -1,7 +1,4 @@
 -------------
-name: Orpheus
-slug: orpheus
-level: 13 
 minMoves: 700
 zoom: 0.5 
 -------------
