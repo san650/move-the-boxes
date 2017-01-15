@@ -25,7 +25,7 @@ Sokoban like game implemented in [Ember](http://emberjs.com).
 
 ## Screenshot
 
-![screenshot](./screenshot.png)
+![screenshot](./demo.gif)
 
 ## License
 
