@@ -1,9 +1,9 @@
 -------------
-name: Sanhiro
-slug: sanhiro
+name: Sanshiro
+slug: sanshiro
 level: 11
-minMoves: 450 
-zoom: 0.6 
+minMoves: 450
+zoom: 0.6
 -------------
 ~~~~~~~XXXXX~
 ~XXXXXXX   XX
