@@ -1,7 +1,4 @@
 -------------
-name: Herodoto 
-slug: herodoto 
-level: 3
 minMoves: 29 
 zoom: 1
 -------------

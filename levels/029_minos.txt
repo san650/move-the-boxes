@@ -1,7 +1,4 @@
 -------------
-name: Minos
-slug: minos
-level: 29
 minMoves: 700
 zoom: 0.48 
 -------------

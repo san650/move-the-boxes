@@ -1,7 +1,4 @@
 -------------
-name: Mononoke
-slug: mononoke
-level: 6
 minMoves: 480 
 zoom: 0.6 
 -------------

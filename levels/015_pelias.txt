@@ -1,7 +1,4 @@
 -------------
-name: Pelias
-slug: pelias
-level: 15
 minMoves: 650 
 zoom: 0.5 
 -------------

@@ -1,7 +1,4 @@
 -------------
-name: Amphion
-slug: amphion
-level: 10
 minMoves: 450 
 zoom: 0.6 
 -------------

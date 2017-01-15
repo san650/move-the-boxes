@@ -1,7 +1,4 @@
 -------------
-name: Elixir
-slug: elixir
-level: 5
 minMoves: 13 
 zoom: 0.8
 -------------

@@ -1,7 +1,4 @@
 -------------
-name: Iravan
-slug: iravan
-level: 17
 minMoves: 780
 zoom: 0.6 
 -------------

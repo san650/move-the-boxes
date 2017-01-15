@@ -1,7 +1,4 @@
 -------------
-name: Nakula
-slug: nakula
-level: 20
 minMoves: 800
 zoom: 0.5 
 -------------

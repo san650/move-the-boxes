@@ -1,7 +1,4 @@
 -------------
-name: Tityas
-slug: tityas
-level: 28
 minMoves: 1500
 zoom: 0.48
 -------------

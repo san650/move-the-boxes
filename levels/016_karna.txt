@@ -1,7 +1,4 @@
 -------------
-name: Karna
-slug: karna
-level: 16
 minMoves: 720
 zoom: 0.6 
 -------------

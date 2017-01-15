@@ -1,7 +1,4 @@
 -------------
-name: Phoenix
-slug: phoenix
-level: 8
 minMoves: 300
 zoom: 0.6
 -------------

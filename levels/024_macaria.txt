@@ -1,7 +1,4 @@
 -------------
-name: Macaria
-slug: macaria
-level: 24
 minMoves: 1100
 zoom: 0.48 
 -------------

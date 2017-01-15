@@ -1,7 +1,4 @@
 -------------
-name: Arjuna
-slug: arjuna
-level: 12
 minMoves: 810
 zoom: 0.5 
 -------------

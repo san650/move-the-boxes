@@ -1,7 +1,4 @@
 -------------
-name: Tutorial
-slug: tutorial
-level: 0
 minMoves: 12
 zoom: 1
 -------------

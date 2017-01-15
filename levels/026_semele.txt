@@ -1,7 +1,4 @@
 -------------
-name: Semele
-slug: semele
-level: 26
 minMoves: 1500
 zoom: 0.48 
 -------------

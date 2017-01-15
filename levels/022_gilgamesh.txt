@@ -1,7 +1,4 @@
 -------------
-name: Gilgamesh
-slug: gilgamesh 
-level: 22
 minMoves: 700
 zoom: 0.6 
 -------------
