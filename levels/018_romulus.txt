@@ -1,0 +1,23 @@
+-------------
+name: Romulus
+slug: romulus
+level: 18
+minMoves: 840 
+zoom: 0.5 
+-------------
+~~~~~~~XXXXXXX~~~~
+~XXXXXXX     X~~~~
+~X     X *@* X~~~~
+~X** X   XXXXXXXXX
+~X XXX......XX   X
+~X   *......XX X X
+~X XXX......     X
+XX   XXXX XXX X*XX
+X  X*   X  *  X X~
+X  * ***  X *XX X~
+X   * * XXX** X X~
+XXXXX     *   X X~
+~~~~XXX XXX   X X~
+~~~~~~X     X   X~
+~~~~~~XXXXXXXX  X~
+~~~~~~~~~~~~~XXXX~

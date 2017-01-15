@@ -1,0 +1,18 @@
+-------------
+name: Amphion
+slug: amphion
+level: 10
+minMoves: 450 
+zoom: 0.6 
+-------------
+XXXXXX~~XXX~
+X..  X~XX@XX
+X..  XXX   X
+X..     ** X
+X..  X X * X
+X..XXX X * X
+XXXX * X*  X
+~~~X  *X * X
+~~~X *  *  X
+~~~X  XX   X
+~~~XXXXXXXXX

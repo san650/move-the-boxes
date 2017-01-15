@@ -1,0 +1,23 @@
+-------------
+name: Macaria
+slug: macaria
+level: 24
+minMoves: 1100
+zoom: 0.48 
+-------------
+~~~~XXXXXXXXXX~~~~~
+XXXXX        XXXX~~
+X     X   *  X@ X~~
+X XXXXXXX*XXXX  XXX
+X X    XX X  X* ..X
+X X *     X  X  X.X
+X X *  X     X* ..X
+X X  XXX XX     X.X
+X XXX  X  X  X* ..X
+X X    X  XXXX  X.X
+X X*   *  *  X* ..X
+X    * X * * X  X.X
+XXXX *XXX    X* ..X
+~~~X    ** XXX....X
+~~~X      XX~XXXXXX
+~~~XXXXXXXX~~~~~~~~

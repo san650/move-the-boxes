@@ -1,0 +1,20 @@
+-------------
+name: Gilgamesh
+slug: gilgamesh 
+level: 22
+minMoves: 700
+zoom: 0.6 
+-------------
+~~~~~XXXXXXXXXXX~~~
+~~~~~X  .  X   X~~~
+~~~~~X X.    @ X~~~
+~XXXXX XX..X XXXX~~
+XX  X ..XXX     XXX
+X * X...   * X  * X
+X    .. XX  XX XX X
+XXXX*XX*X * X   X X
+~~XX X    X* ** X X
+~~X  * X X  X *XX X
+~~X               X
+~~X  XXXXXXXXXXX  X
+~~XXXX~~~~~~~~~XXXX

@@ -1,0 +1,23 @@
+-------------
+name: Arjuna
+slug: arjuna
+level: 12
+minMoves: 810
+zoom: 0.5 
+-------------
+~~XXXX~~~~~~~~~~
+~~X  XXXXXXXXXXX
+~~X    *   * * X
+~~X *X * X  *  X
+~~X  * *  X    X
+XXX *X X  XXXX X
+X@X* * *  XX   X
+X    * X*X   X X
+X   *    * * * X
+XXXXX  XXXXXXXXX
+~~X      X~~~~~~
+~~X      X~~~~~~
+~~X......X~~~~~~
+~~X......X~~~~~~
+~~X......X~~~~~~
+~~XXXXXXXX~~~~~~

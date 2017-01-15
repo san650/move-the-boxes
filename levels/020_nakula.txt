@@ -1,0 +1,22 @@
+-------------
+name: Nakula
+slug: nakula
+level: 20
+minMoves: 800
+zoom: 0.5 
+-------------
+XXXXX~~~~~~~~~
+X   XX~~~~~~~~
+X    X~~XXXX~~
+X *  XXXX  X~~
+X  ** *   *X~~
+XXX@ X*    XX~
+~X  XX  * * XX
+~X *  XX XX .X
+~X  X*XX*  X.X
+~XXX   *..XX.X
+~~X    X.*...X
+~~X ** X.....X
+~~X  XXXXXXXXX
+~~X  X~~~~~~~~
+~~XXXX~~~~~~~~

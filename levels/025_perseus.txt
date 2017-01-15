@@ -1,0 +1,22 @@
+-------------
+name: Perseus
+slug: perseus
+level: 25
+minMoves: 800
+zoom: 0.5 
+-------------
+XXXXXXXXX~~~~~~
+X       X~~~~~~
+X       XXXX~~~
+XX XXXX X  X~~~
+XX X@XX    X~~~
+X *** *  **X~~~
+X  X XX *  X~~~
+X  X XX  * XXXX
+XXXX  *** *X  X
+~X   XX   ....X
+~X X   X X.. .X
+~X   X X XX...X
+~XXXXX *  X...X
+~~~~~XX   XXXXX
+~~~~~~XXXXX~~~~

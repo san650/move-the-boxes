@@ -1,0 +1,21 @@
+-------------
+name: Memmon
+slug: memmon
+level: 27
+minMoves: 1000
+zoom: 0.5 
+-------------
+~~~~XXXXXXX~~~~~~~~
+~~~~X  X  XXXX~~~~~
+XXXXX *X* X  XX~~~~
+X.. X  X  X   X~~~~
+X.. X *X* X  *XXXX~
+X.  X     X*  X  X~
+X..   *X  X *    X~
+X..@X  X* X*  X  X~
+X.. X *X     *X  X~
+X.. X  X**X*  X  XX
+X.. X *X  X  *X*  X
+X.. X  X  X   X   X
+XX. XXXX  XXXXX   X
+~XXXX~~XXXX~~~XXXXX

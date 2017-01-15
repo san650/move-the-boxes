@@ -1,0 +1,22 @@
+-------------
+name: Pelias
+slug: pelias
+level: 15
+minMoves: 650 
+zoom: 0.5 
+-------------
+~~~~~~~~~~XXXX~~~~~
+~~~~~XXXX~X  X~~~~~
+~~~XXX @XXX* X~~~~~
+~~XX      *  X~~~~~
+~XX  * **XX XX~~~~~
+~X  X*XX     X~~~~~
+~X X * ** X XXX~~~~
+~X   * X  X * XXXXX
+XXXX    X  ** X   X
+XXXX XX *         X
+X.    XXX  XXXXXXXX
+X.. ..X~XXXX~~~~~~~
+X...X.X~~~~~~~~~~~~
+X.....X~~~~~~~~~~~~
+XXXXXXX~~~~~~~~~~~~
