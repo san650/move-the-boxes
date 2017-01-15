@@ -1,7 +1,7 @@
 -------------
 name: Pollok
 slug: pollok 
-level: 6
+level: 7
 minMoves: 13 
 zoom: 0.6 
 -------------

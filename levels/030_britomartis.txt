@@ -1,0 +1,19 @@
+-------------
+name: Britomartis
+slug: britomartis
+level: 30
+minMoves: 750 
+zoom: 0.6 
+-------------
+~XXXXXXX~~~~~~~
+~X  X  XXXXX~~~
+XX  X  X...XXX~
+X  *X  X...  X~
+X * X** ...  X~
+X  *X  X... .X~
+X   X *XXXXXXXX
+XX*       * * X
+XX  X  ** X   X
+~XXXXXX  XX**@X
+~~~~~~X      XX
+~~~~~~XXXXXXXX~

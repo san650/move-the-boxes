@@ -1,0 +1,17 @@
+-------------
+name: Mononoke
+slug: mononoke
+level: 6
+minMoves: 480 
+zoom: 0.6 
+-------------
+XXXXXXXXXXXX~~
+X..  X     XXX
+X..  X *  *  X
+X..  X*XXXX  X
+X..    @ XX  X
+X..  X X  * XX
+XXXXXX XX* * X
+~~X *  * * * X
+~~X    X     X
+~~XXXXXXXXXXXX

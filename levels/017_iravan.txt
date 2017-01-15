@@ -1,0 +1,20 @@
+-------------
+name: Iravan
+slug: iravan
+level: 17
+minMoves: 780
+zoom: 0.6 
+-------------
+~~~XXXXXXXXX~~~~~~~
+~~XX   XX  XXXXX~~~
+XXX     X  X    XXX
+X  * X* X  X  ... X
+X X *X@*XX X X.X. X
+X  X X*  X    . . X
+X *    * X X X.X. X
+X   XX  XX* * . . X
+X * X   X  X*X.X. X
+XX *  *   *  *... X
+~X* XXXXXX    XX  X
+~X  X~~~~XXXXXXXXXX
+~XXXX~~~~~~~~~~~~~~

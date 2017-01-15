@@ -1,0 +1,19 @@
+-------------
+name: Sanhiro
+slug: sanhiro
+level: 11
+minMoves: 450 
+zoom: 0.6 
+-------------
+~~~~~~~XXXXX~
+~XXXXXXX   XX
+XX X @XX ** X
+X    *      X
+X  *  XXX   X
+XXX XXXXX*XXX
+X *  XXX ..X~
+X * * * ...X~
+X    XXX...X~
+X ** X~X...X~
+X  XXX~XXXXX~
+XXXX~~~~~~~~~

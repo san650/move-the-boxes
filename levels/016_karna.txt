@@ -1,0 +1,20 @@
+-------------
+name: Karna
+slug: karna
+level: 16
+minMoves: 720
+zoom: 0.6 
+-------------
+XXXXXXXXXXXXXXXX~
+X              X~
+X X XXXXXX     X~
+X X  * * * *X  X~
+X X   *@*   XX XX
+X X  * * *XXX...X
+X X   * *  XX...X
+X XXX*** * XX...X
+X     X XX XX...X
+XXXXX   XX XX...X
+~~~~XXXXX     XXX
+~~~~~~~~X     X~~
+~~~~~~~~XXXXXXX~~
