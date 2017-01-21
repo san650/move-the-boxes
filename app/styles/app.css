@@ -5,6 +5,7 @@
   --layer-pc: 3;
   --layer-wall: 4;
   --layer-osd: 5;
+  --layer-controls: 6;
 }
 
 html {
@@ -168,6 +169,54 @@ a:visited {
   background-position-x: 0;
 }
 
+.kind--touch-arrow {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 60px;
+  z-index: var(--layer-controls);
+  opacity: .1;
+  animation: 1s ease-in-out 0 infinite alternate both wave;
+}
+
+@keyframes wave {
+  from {
+    opacity: .1;
+  }
+  90% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.kind--touch-arrow.up {
+  background-image: url('/move-up.png');
+  background-size: auto 60px;
+  background-position: 50% 100%;
+  animation-delay: 0;
+}
+
+.kind--touch-arrow.right {
+  background-image: url('/move-right.png');
+  background-position: 0 50%;
+  animation-delay: .2s;
+}
+
+.kind--touch-arrow.down {
+  background-image: url('/move-down.png');
+  background-size: auto 60px;
+  background-position: 50% 0;
+  animation-delay: .4s;
+}
+
+.kind--touch-arrow.left {
+  background-image: url('/move-left.png');
+  background-position: 100% 50%;
+  animation-delay: .6s;
+}
+
 .board {
   margin: 0 auto;
   border: 1px solid rgba(0,0,0,0.3);
@@ -320,6 +369,7 @@ a:visited {
   position: fixed;
   top: 20px;
   right: 20px;
+  pointer-events: none;
 }
 
 .score-board table {

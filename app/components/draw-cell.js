@@ -24,7 +24,13 @@ const Component = Ember.Component.extend({
     let variant = Math.round(Math.random(VARIANT_COUNT) * VARIANT_COUNT);
 
     return `kind--variant-${variant}`;
-  })
+  }),
+
+  click() {
+    if (this.get('on-click')) {
+      this.attrs['on-click']();
+    }
+  }
 });
 
 Component.reopenClass({
