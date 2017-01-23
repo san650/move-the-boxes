@@ -1,12 +1,10 @@
 import Ember from 'ember';
 
-const { inject, computed } = Ember;
+const { inject } = Ember;
 
 export default Ember.Route.extend({
   score: inject.service(),
   directory: inject.service(),
-
-  levels: computed.alias('score.levels'),
 
   beforeModel() {
     this.get('score').resetLevelMoves();
@@ -25,23 +23,11 @@ export default Ember.Route.extend({
 
   setupController(controller, model) {
     controller.set('level', model);
-    controller.set('hasNextLevel', this.get('directory').hasNext(model.get('slug')));
   },
 
   actions: {
-    move(level, direction) {
-      if(level[direction]()) {
-        this.get('score').countMove();
-      }
-    },
-
-    nextLevel(current) {
-      let next = this.get('directory').findNext(current.get('slug'));
-      if (next) {
-        this.transitionTo('level', next.get('slug'));
-      } else {
-        this.transitionTo('game');
-      }
+    transitionToCompleted(slug) {
+      this.transitionTo('level.completed', slug);
     }
   }
 });

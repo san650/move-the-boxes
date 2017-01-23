@@ -22,8 +22,10 @@ const Component = Ember.Component.extend({
 
   actions: {
     move(direction) {
-      this.get('moveTask').perform(direction);
-      this.get('walkAnimationTask').perform();
+      if (!this.get('level.won')) {
+        this.get('moveTask').perform(direction);
+        this.get('walkAnimationTask').perform();
+      }
     }
   }
 });
