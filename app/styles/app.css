@@ -162,18 +162,30 @@ a:visited {
 
 .walk .kind--player-img {
   background-position-x: calc(var(--player-width) * -1);
+  animation-name: walk;
+  animation-duration: .2s;
+  animation-timing-function: step-end;
+  animation-delay: 0;
+  animation-direction: normal;
+  animation-fill-mode: none;
 }
 
-.walk.walk-invert .kind--player-img {
-  background-position-x: calc(var(--player-width) * -3);
-}
-
-.right.walk .kind--player-img {
-  background-position-x: calc(var(--player-width) * -2);
-}
-
-.right.walk.walk-invert .kind--player-img {
-  background-position-x: 0;
+@keyframes walk {
+  from {
+    background-position-x: 0;
+  }
+  25% {
+    background-position-x: calc(var(--player-width) * -1);
+  }
+  50% {
+    background-position-x: 0;
+  }
+  75% {
+    background-position-x: calc(var(--player-width) * -3);
+  }
+  to {
+    background-position-x: 0;
+  }
 }
 
 .kind--touch-arrow {
@@ -395,4 +407,3 @@ a:visited {
   margin-left: 20px;
   text-align: right;
 }
-

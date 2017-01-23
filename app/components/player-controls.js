@@ -1,30 +1,21 @@
 import Ember from 'ember';
-import { task, timeout } from 'ember-concurrency';
+import { task } from 'ember-concurrency';
+import { waitAnimation } from 'move-the-boxes/utils/wait-animation';
+
+const { $ } = Ember;
 
 const Component = Ember.Component.extend({
-  tagName: null,
+  tagName: '',
 
   moveTask: task(function * (direction) {
     this.attrs.onMove(direction);
-    yield timeout(200);
+    yield waitAnimation($('.kind--player'), 'walk');
   }).keepLatest(),
-
-  walkAnimationTask: task(function * () {
-    this.set('cell.walk', true);
-    yield timeout(66);
-    this.set('cell.walk', false);
-    yield timeout(66);
-    this.set('cell.walk', true);
-    this.toggleProperty('cell.walkInvert');
-    yield timeout(66);
-    this.set('cell.walk', false);
-  }).drop(),
 
   actions: {
     move(direction) {
       if (!this.get('level.won')) {
         this.get('moveTask').perform(direction);
-        this.get('walkAnimationTask').perform();
       }
     }
   }
