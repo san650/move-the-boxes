@@ -1,8 +1,10 @@
 <div class="container {{if level.won "won"}}">
   <div class="container--inner" style="transform:scale({{level.zoom}})">
     {{#draw-board level.board}}
-      {{draw-player level.player onMove=(route-action 'move' level)}}
-      {{draw-touch-arrows level.player onMove=(route-action 'move' level)}}
+      {{#player-controls level.player onMove=(route-action 'move' level) as |api|}}
+        {{draw-player level.player onMove=api.move}}
+        {{draw-touch-arrows level.player onMove=api.move}}
+      {{/player-controls}}
     {{/draw-board}}
   </div>
 

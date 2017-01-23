@@ -68,7 +68,6 @@ const Component = Ember.Component.extend({
 
   actions: {
     onClick(direction) {
-      console.log(direction);
       this.attrs.onMove(direction);
     }
   }

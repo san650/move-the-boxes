@@ -2,33 +2,16 @@ import Ember from 'ember';
 import DrawCell from 'move-the-boxes/components/draw-cell';
 import { EKMixin, getCode, keyDown } from 'ember-keyboard';
 import hbs from 'htmlbars-inline-precompile';
-import { task, timeout } from 'ember-concurrency';
 
 const { on } = Ember;
 
 export default DrawCell.extend(EKMixin, {
   layout: hbs`<span class="kind--player-img"></span>`,
-  classNameBindings: ['walk', 'walkInvert'],
+  classNameBindings: ['cell.walk', 'cell.walkInvert'],
 
   activateKeyboard: on('init', function() {
     this.set('keyboardActivated', true);
   }),
-
-  moveTask: task(function * (direction) {
-    this.attrs.onMove(direction);
-    yield timeout(200);
-  }).keepLatest(),
-
-  walkAnimationTask: task(function * () {
-    this.set('walk', true);
-    yield timeout(66);
-    this.set('walk', false);
-    yield timeout(66);
-    this.set('walk', true);
-    this.toggleProperty('walkInvert');
-    yield timeout(66);
-    this.set('walk', false);
-  }).drop(),
 
   move: on(
     keyDown('ArrowUp'),
@@ -61,7 +44,6 @@ export default DrawCell.extend(EKMixin, {
         break;
     }
 
-    this.get('moveTask').perform(direction);
-    this.get('walkAnimationTask').perform();
+    this.attrs.onMove(direction);
   })
 });
