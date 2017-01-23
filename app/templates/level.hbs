@@ -1,12 +1,12 @@
 <div class="container {{if level.won "won"}}">
-  <div class="container--inner" style="transform:scale({{level.zoom}})">
+  {{#zoom-panel level=level}}
     {{#draw-board level.board}}
       {{#player-controls level.player onMove=(route-action 'move' level) as |api|}}
         {{draw-player level.player onMove=api.move}}
         {{draw-touch-arrows level.player onMove=api.move}}
       {{/player-controls}}
     {{/draw-board}}
-  </div>
+  {{/zoom-panel}}
 
   {{track-event action="start level" label=level.slug}}
 

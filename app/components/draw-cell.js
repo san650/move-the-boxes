@@ -13,7 +13,7 @@ const Component = Ember.Component.extend({
     let left = SIZE * this.get('cell.column');
     let top = SIZE * this.get('cell.row');
 
-    return `left:${left}px;top:${top}px`;
+    return `left:${left}px;top:${top}px`.htmlSafe();
   }),
 
   cellType: computed('cell', function() {
