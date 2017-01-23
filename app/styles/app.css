@@ -8,6 +8,13 @@
   --layer-controls: 6;
 }
 
+@font-face {
+  font-family: 'pixelated';
+  src: url('/fonts/pixelated.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   height: 100%;
   background-color: #2b2300;
@@ -237,7 +244,7 @@ a:visited {
   margin: 0;
   padding-top: 250px;
   text-align: center;
-  font-family: "SFPixelateShadedRegular", Monospace;
+  font-family: "pixelated", Monospace;
   color: #FA6900;
   font-size: 2rem;
 }
@@ -361,7 +368,7 @@ a:visited {
 }
 
 .score-board {
-  font-family: "SFPixelateShadedRegular", Monospace;
+  font-family: "pixelated", Monospace;
   font-weight: normal;
   font-style: normal;
   font-size: 60px;
