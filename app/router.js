@@ -23,7 +23,9 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('game', { path: '/' }, function() {
-    this.route('level', { path: ':slug', resetNamespace: true });
+    this.route('level', { path: ':slug', resetNamespace: true }, function() {
+      this.route('completed');
+    });
   });
 });
 

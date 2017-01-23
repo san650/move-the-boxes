@@ -5,6 +5,14 @@
   --layer-pc: 3;
   --layer-wall: 4;
   --layer-osd: 5;
+  --layer-controls: 6;
+}
+
+@font-face {
+  font-family: 'pixelated';
+  src: url('/fonts/pixelated.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 html {
@@ -154,18 +162,78 @@ a:visited {
 
 .walk .kind--player-img {
   background-position-x: calc(var(--player-width) * -1);
+  animation-name: walk;
+  animation-duration: .2s;
+  animation-timing-function: step-end;
+  animation-delay: 0;
+  animation-direction: normal;
+  animation-fill-mode: none;
 }
 
-.walk.walk-invert .kind--player-img {
-  background-position-x: calc(var(--player-width) * -3);
+@keyframes walk {
+  from {
+    background-position-x: 0;
+  }
+  25% {
+    background-position-x: calc(var(--player-width) * -1);
+  }
+  50% {
+    background-position-x: 0;
+  }
+  75% {
+    background-position-x: calc(var(--player-width) * -3);
+  }
+  to {
+    background-position-x: 0;
+  }
 }
 
-.right.walk .kind--player-img {
-  background-position-x: calc(var(--player-width) * -2);
+.kind--touch-arrow {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 60px;
+  z-index: var(--layer-controls);
+  opacity: .1;
+  animation: 1s ease-in-out 0 infinite alternate both wave;
 }
 
-.right.walk.walk-invert .kind--player-img {
-  background-position-x: 0;
+@keyframes wave {
+  from {
+    opacity: .1;
+  }
+  90% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.kind--touch-arrow.up {
+  background-image: url('/move-up.png');
+  background-size: auto 60px;
+  background-position: 50% 100%;
+  animation-delay: 0;
+}
+
+.kind--touch-arrow.right {
+  background-image: url('/move-right.png');
+  background-position: 0 50%;
+  animation-delay: .2s;
+}
+
+.kind--touch-arrow.down {
+  background-image: url('/move-down.png');
+  background-size: auto 60px;
+  background-position: 50% 0;
+  animation-delay: .4s;
+}
+
+.kind--touch-arrow.left {
+  background-image: url('/move-left.png');
+  background-position: 100% 50%;
+  animation-delay: .6s;
 }
 
 .board {
@@ -188,7 +256,7 @@ a:visited {
   margin: 0;
   padding-top: 250px;
   text-align: center;
-  font-family: "SFPixelateShadedRegular", Monospace;
+  font-family: "pixelated", Monospace;
   color: #FA6900;
   font-size: 2rem;
 }
@@ -312,7 +380,7 @@ a:visited {
 }
 
 .score-board {
-  font-family: "SFPixelateShadedRegular", Monospace;
+  font-family: "pixelated", Monospace;
   font-weight: normal;
   font-style: normal;
   font-size: 60px;
@@ -320,6 +388,7 @@ a:visited {
   position: fixed;
   top: 20px;
   right: 20px;
+  pointer-events: none;
 }
 
 .score-board table {
@@ -338,4 +407,3 @@ a:visited {
   margin-left: 20px;
   text-align: right;
 }
-

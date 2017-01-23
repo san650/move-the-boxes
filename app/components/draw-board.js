@@ -10,7 +10,7 @@ const Component = Ember.Component.extend({
     let width = SIZE * this.get('board.columnCount');
     let height = SIZE * this.get('board.rowCount');
 
-    return `width:${width}px;height:${height}px;`;
+    return `width:${width}px;height:${height}px;`.htmlSafe();
   })
 });
 

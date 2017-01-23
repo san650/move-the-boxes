@@ -13,7 +13,7 @@ const Component = Ember.Component.extend({
     let left = SIZE * this.get('cell.column');
     let top = SIZE * this.get('cell.row');
 
-    return `left:${left}px;top:${top}px`;
+    return `left:${left}px;top:${top}px`.htmlSafe();
   }),
 
   cellType: computed('cell', function() {
@@ -24,7 +24,13 @@ const Component = Ember.Component.extend({
     let variant = Math.round(Math.random(VARIANT_COUNT) * VARIANT_COUNT);
 
     return `kind--variant-${variant}`;
-  })
+  }),
+
+  click() {
+    if (this.get('on-click')) {
+      this.attrs['on-click']();
+    }
+  }
 });
 
 Component.reopenClass({
