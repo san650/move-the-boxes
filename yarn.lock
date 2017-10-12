@@ -2509,9 +2509,9 @@ ember-try@^0.2.2:
     rsvp "^3.0.17"
     semver "^5.1.0"
 
-ember-web-app@sutori/ember-web-app#add-browserconfig-xml:
-  version "2.0.0"
-  resolved "https://codeload.github.com/sutori/ember-web-app/tar.gz/2d7dfe75c1e3ac83324bd0181044c96439ccbfc4"
+ember-web-app@san650/ember-web-app#master:
+  version "2.2.0"
+  resolved "https://codeload.github.com/san650/ember-web-app/tar.gz/1b0e28c94aa81310b114cdd7e75caed630c267a7"
   dependencies:
     broccoli-asset-rev "^2.5.0"
     broccoli-caching-writer "^3.0.3"

@@ -45,7 +45,7 @@
     "ember-preferences": "1.2.1",
     "ember-resolver": "^2.0.3",
     "ember-route-action-helper": "2.0.0",
-    "ember-web-app": "sutori/ember-web-app#add-browserconfig-xml",
+    "ember-web-app": "san650/ember-web-app#master",
     "loader.js": "^4.0.1"
   },
   "dependencies": {
