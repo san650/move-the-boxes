@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 const { computed } = Ember;
 
-export default Ember.Component.extend({
+const Component = Ember.Component.extend({
   classNames: ['container--inner'],
   attributeBindings: ['style'],
 
@@ -12,3 +12,9 @@ export default Ember.Component.extend({
     return `transform: scale(${level.zoom})`.htmlSafe();
   })
 });
+
+Component.reopenClass({
+  positionalParams: ['level']
+});
+
+export default Component;

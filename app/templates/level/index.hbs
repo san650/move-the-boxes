@@ -1,11 +1,11 @@
 <div class="container {{if level.won "won"}}">
-  {{#zoom-panel level=level}}
+  {{#zoom-panel level}}
     {{#draw-board level.board}}
       {{#player-controls level.player level=level onMove=(route-action 'move' level) as |api|}}
         {{draw-player level.player onMove=api.move}}
 
         {{#if level.won}}
-          {{wait-for 2000 onDone=(route-action 'transitionToCompleted' level.slug)}}
+          {{wait-for 500 onDone=(route-action 'transitionToCompleted' level.slug)}}
         {{else}}
           {{draw-touch-arrows level.player onMove=api.move}}
         {{/if}}
